@@ -83,8 +83,7 @@ swim_times = [32.5, 30.1, 33.8, 29.6, 31.2, 34.0, 28.9,
               30.4, 38.1, 27.5, 35.6, 31.8, 29.2, 33.0, 30.5]
 # Answer for Question 2 here
 
-# for i in range(len(swim_times)):
-#     print(swim_times[i])
+
 
 
 
@@ -101,27 +100,6 @@ donations = {
     'Class 4E': 415, 'Class 5F': 390
 }
 # Answer for Question 3 here
-highclass = ""
-lowclass = ""
-
-highamt = 0
-lowamt = 9999999999999999999
-
-# loop through a dictionary
-for thisclass, amount in donations.items():
-    if amount > highamt:
-        highamt = amount # remember the current highest value
-        highclass = thisclass
-    if amount < lowamt:
-        lowamt = amount
-        lowclass = thisclass
-
-print(f"{highclass} donated the most with ${highamt}")
-print(f"{lowclass} donated the least with ${lowamt}")
-
-# for thisclass in donations:
-#     print(f"{thisclass}: {donations[thisclass]}")
-
 
 
 
