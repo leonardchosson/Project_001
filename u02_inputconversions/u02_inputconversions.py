@@ -30,15 +30,15 @@
 #       The program must display a suitable input message. [1] 
 ###########################################################
 # Copy + Paste & Write your code here
-while True: 
-    expressway = input("Enter name of gantry:") 
-    old = float(input("Enter old rate:")) 
-    new = float(input("Enter new rate:")) 
-    change = new - old 
-    print("Change is",change) 
-    choice = input("Are there any more expressways you would like to add? (Y or N)")
-    if choice.upper() == "N":
-        break
+# while True: 
+#     expressway = input("Enter name of gantry:") 
+#     old = float(input("Enter old rate:")) 
+#     new = float(input("Enter new rate:")) 
+#     change = new - old 
+#     print("Change is",change) 
+#     choice = input("Are there any more expressways you would like to add? (Y or N)")
+#     if choice.upper() == "N":
+#         break
 
 
 
@@ -49,15 +49,30 @@ while True:
 #       must loop until the name of the gantry is an input of a maximum of 20 letters. [4] 
 ###########################################################
 # Copy + Paste & Write your code here
-while True: 
-    expressway = input("Enter name of gantry:") 
+number_gantries = int(input("How many gantrees will be inputted?"))
+for i in range(number_gantries): 
+    while True:
+        expressway = input("Enter name of gantry:")
+
+        # if len(expressway) > 20:
+        #     print("Expressway name cannot be more than 20.")
+        # elif expressway.isalpha() == False:
+        #     print("Expressway name can only contain letters.")
+        # else:
+        #     break
+
+        if len(expressway) <=20 :
+            if expressway.isalpha() == True:
+                break
+            else:
+                print("The name of the expressway is only in letters")
+        else:
+            print("The name of the expressway must be less than or equals to 20")
+            
     old = float(input("Enter old rate:")) 
     new = float(input("Enter new rate:")) 
     change = new - old 
     print("Change is",change) 
-    choice = input("Are there any more expressways you would like to add? (Y or N)")
-    if choice.upper() == "N":
-        break
 
 
 
@@ -67,8 +82,24 @@ while True:
 #       been increased is stored in a list and then displayed. [4] 
 ###########################################################
 # Copy + Paste & Write your code here
-
-
+increased_name = []
+number_gantries = int(input("How many gantrees will be inputted?"))
+for i in range(number_gantries): 
+    while True:
+        expressway = input("Enter name of gantry:")
+        if len(expressway) <=20 :
+            if expressway.isalpha() == True:
+                break
+            else:
+                print("The name of the expressway is only in letters")
+        else:
+            print("The name of the expressway must be less than or equals to 20")
+    old = float(input("Enter old rate:")) 
+    new = float(input("Enter new rate:")) 
+    change = new - old 
+    if change>0:
+        expressway.append()
+    print("Change is",change) 
 
 
 ###########################################################
